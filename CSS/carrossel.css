@@ -1,0 +1,4 @@
+.carousel-image {
+    max-height: 1000px; /* Ajuste o valor conforme necessário */
+    object-fit: contain; /* Define como a imagem é ajustada dentro do espaço disponível */
+  }

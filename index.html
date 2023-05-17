@@ -13,7 +13,8 @@
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
 </head>
-<body>
+
+<body style="background-image: url(https://www.seguroviagem.org/wp-content/uploads/2017/03/sites-de-viagens.jpg);">
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Tech Voyage</a>
@@ -25,16 +26,16 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Sobre</a>
+                        <a class="nav-link active" aria-current="page" href="carrossel">Galeria Voyage</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
-                            Destinos
+                            Viagens
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Planejadas</a></li>
-                            <li><a class="dropdown-item" href="#">Realizadas</a></li>
+                            <li><a id="filtrarPlanejadas" class="dropdown-item" href="#">Planejadas</a></li>
+                            <li><a id="filtrarRealizadas" class="dropdown-item" href="#">Realizadas</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
@@ -43,7 +44,7 @@
                     </li>
                 </ul>
                 <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="filtrar" aria-label="filtrar">
+                    <input id="busca" class="form-control me-2" type="search" placeholder="filtrar" aria-label="filtrar">
                     <button class="btn btn-outline-success" type="submit">Buscar</button>
                 </form>
             </div>
@@ -51,196 +52,100 @@
     </nav>
 
     <main class="container">
-        <div class="row mt-2">
-            <div class="col">
-                <input type="text" class="form-control" placeholder="Destino" aria-label="Destino">
-            </div>
-            <div class="col">
-                <input type="number" class="form-control" placeholder="Avaliações" aria-label="Avaliações">
-            </div>
-            <div class="col-4">
-                <select class="form-select" aria-label="selecione a categoria">
-                    <option selected>Selecione o tipo de viagem</option>
-                    <option value="1">Praia</option>
-                    <option value="2">Cidade</option>
-                    <option value="3">Cultural</option>
-                    <option value="4">Aventura</option>
-                </select>
-            </div>
-            <div class="col">
-                <button type="button" class="btn btn-primary">Salvar</button>
-            </div>
-        </div>
+        
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Launch demo modal
+    </button>
 
-        <div class="row mx-auto my-2 g-3">
-            <div class="col-lg-3 col-md-6 col-sm-12">
-                <div class="card">
-                    <div class="card-header">
-                        Praia do Forte
-                    </div>
-                    <div class="card-body">
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <p class="card-text">Bahia</p>
-                    </div>
-                    <div class="card-footer">
-                        <a href="#" class="btn btn-success" title="marcar como concluída">
-                            <i class="bi bi-check2"></i>
-                        </a>
-                        <a href="#" class="btn btn-danger" title="apagar tarefa">
-                            <i class="bi bi-trash3"></i>
-                        </a>
-                    </div>  <!-- card footer -->
-                </div> <!-- card -->
-            </div> <!-- col -->
-            
-            <div class="col-lg-3 col-md-6 col-sm-12">
-                <div class="card">
-                    <div class="card-header">
-                        Florianópolis 
-                    </div>
-                    <div class="card-body">
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <p class="card-text">Santa Catarina</p>
-                    </div>
-                    <div class="card-footer">
-                        <a href="#" class="btn btn-success" title="marcar como concluída">
-                            <i class="bi bi-check2"></i>
-                        </a>
-                        <a href="#" class="btn btn-danger" title="apagar tarefa">
-                            <i class="bi bi-trash3"></i>
-                        </a>
-                    </div>  
-                </div> 
-            </div> 
-
-            <div class="col-lg-3 col-md-6 col-sm-12">
-                <div class="card">
-                    <div class="card-header">
-                        Farol da Barra
-                    </div>
-                    <div class="card-body">
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <p class="card-text">Salvador</p>
-                    </div>
-                    <div class="card-footer">
-                        <a href="#" class="btn btn-success" title="marcar como concluída">
-                            <i class="bi bi-check2"></i>
-                        </a>
-                        <a href="#" class="btn btn-danger" title="apagar tarefa">
-                            <i class="bi bi-trash3"></i>
-                        </a>
-                    </div>  
-                </div> 
-            </div> 
-
-            <div class="col-lg-3 col-md-6 col-sm-12">
-                <div class="card">
-                    <div class="card-header">
-                        Veneza
-                    </div>
-                    <div class="card-body">
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <p class="card-text">Itália</p>
-                    </div>
-                    <div class="card-footer">
-                        <a href="#" class="btn btn-success" title="marcar como concluída">
-                            <i class="bi bi-check2"></i>
-                        </a>
-                        <a href="#" class="btn btn-danger" title="apagar tarefa">
-                            <i class="bi bi-trash3"></i>
-                        </a>
-                    </div>  
-                </div> 
-            </div> 
-                      
-            <div class="col-lg-3 col-md-6 col-sm-12">
-                <div class="card">
-                    <div class="card-header">
-                        Barcelona
-                    </div>
-                    <div class="card-body">
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <p class="card-text">Espanha</p>
-                    </div>
-                    <div class="card-footer">
-                        <a href="#" class="btn btn-success" title="marcar como concluída">
-                            <i class="bi bi-check2"></i>
-                        </a>
-                        <a href="#" class="btn btn-danger" title="apagar tarefa">
-                            <i class="bi bi-trash3"></i>
-                        </a>
-                    </div>  
-                </div> 
-            </div> 
-
-            <div class="col-lg-3 col-md-6 col-sm-12">
-                <div class="card">
-                    <div class="card-header">
-                        Amsterdã
-                    </div>
-                    <div class="card-body">
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <p class="card-text">Holanda</p>
-                    </div>
-                    <div class="card-footer">
-                        <a href="#" class="btn btn-success" title="marcar como concluída">
-                            <i class="bi bi-check2"></i>
-                        </a>
-                        <a href="#" class="btn btn-danger" title="apagar tarefa">
-                            <i class="bi bi-trash3"></i>
-                        </a>
-                    </div>  
-                </div> 
-            </div> 
+    <!--Card 1-->
+        <div id="tarefas" class="row mx-auto my-2 g-3"> <!--Div container dos cards-->
 
             
-            <div class="col-lg-3 col-md-6 col-sm-12">
-                <div class="card">
-                    <div class="card-header">
-                        Chapada Diamantina
-                    </div>
-                    <div class="card-body">
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <p class="card-text">Bahia</p>
-                    </div>
-                    <div class="card-footer">
-                        <a href="#" class="btn btn-success" title="marcar como concluída">
-                            <i class="bi bi-check2"></i>
-                        </a>
-                        <a href="#" class="btn btn-danger" title="apagar tarefa">
-                            <i class="bi bi-trash3"></i>
-                        </a>
-                    </div>  
-                </div> 
-            </div> 
-
-            <div class="col-lg-3 col-md-6 col-sm-12">
-                <div class="card">
-                    <div class="card-header">
-                        Serra da Canastra
-                    </div>
-                    <div class="card-body">
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <p class="card-text">Minas Gerais</p>
-                    </div>
-                    <div class="card-footer">
-                        <a href="#" class="btn btn-success" title="marcar como concluída">
-                            <i class="bi bi-check2"></i>
-                        </a>
-                        <a href="#" class="btn btn-danger" title="apagar tarefa">
-                            <i class="bi bi-trash3"></i>
-                        </a>
-                    </div>  
-                </div> 
-            </div> 
 
         </div>  <!-- row -->
-
-            <script src="delete.js"></script>
-            <script src="success.js"></script>
-
     </main>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Buscar viagem</h1> <!--MUDAR TEXTO-->
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <!--Formulário-->
+            <div class="row mt-2 g-3">
+                <div class="col-12">
+                    <input id="titulo" type="text" class="form-control" placeholder="Destino" aria-label="Destino">
+                </div>
+                <div class="col-12">
+                    <input id="estrelas" type="number" class="form-control" placeholder="Avaliação" aria-label="Avaliação" min="0" max="5">
+                </div>
+                <div class="col-12">
+                    <select id="categoria" class="form-select" aria-label="selecione a categoria">
+                        <option selected>Selecione o tipo de viagem</option>
+                        <option value="Praia">Praia</option>
+                        <option value="Cidade">Cidade</option>
+                        <option value="Cultural">Cultural</option>
+                        <option value="Aventura">Aventura</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+          <button id="salvar" type="button" class="btn btn-primary">Salvar</button>
+        </div>
+      </div>
 
-    
+    </div>
+  </div>
+
+  <div id="carrossel" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carrossel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carrossel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carrossel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item">
+    <img src="https://i.pinimg.com/564x/08/bb/46/08bb46158b9ad11ec40f291409056f61.jpg" class="d-block w-100 carousel-image" alt="...">
+    <div class="carousel-caption d-none d-md-block">
+        <h5>First slide label</h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+  </div>
+      <div class="carousel-item">
+        <img src="https://i.pinimg.com/564x/08/bb/46/08bb46158b9ad11ec40f291409056f61.jpg" class="d-block w-100 carousel-image" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Second slide label</h5>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="https://i.pinimg.com/564x/08/bb/46/08bb46158b9ad11ec40f291409056f61.jpg" class="d-block w-100 carousel-image" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Third slide label</h5>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+      </div>
+    </div>  
+    <button class="carousel-control-prev" type="button" data-bs-target="#carrossel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carrossel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+<script src="js/CRUD.js"></script>
+<script src="js/filtro.js"></script>
+<link rel="stylesheet" href="CSS/carrossel.css">
+
+
 </body>
 </html>
