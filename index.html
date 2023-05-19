@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
 </head>
 
-<body style="background-image: url(https://www.seguroviagem.org/wp-content/uploads/2017/03/sites-de-viagens.jpg);">
+<body style="background-image: url(imagens/plano\ fundo.jpg);">
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Tech Voyage</a>
@@ -26,7 +26,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="carrossel">Galeria Voyage</a>
+                        <a class="nav-link active" aria-current="page" href="#carrossel">Galeria Voyage</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -52,26 +52,18 @@
     </nav>
 
     <main class="container">
-        
-    <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-    Launch demo modal
-    </button>
 
     <!--Card 1-->
         <div id="tarefas" class="row mx-auto my-2 g-3"> <!--Div container dos cards-->
-
-            
-
         </div>  <!-- row -->
     </main>
-  
-  <!-- Modal -->
+
+    <!-- Modal -->
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Buscar viagem</h1> <!--MUDAR TEXTO-->
+          <h5 class="modal-title fs-5" id="exampleModalLabel">Buscar viagem</h5> 
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
@@ -99,52 +91,81 @@
           <button id="salvar" type="button" class="btn btn-primary">Salvar</button>
         </div>
       </div>
-
     </div>
   </div>
+</div>
 
-  <div id="carrossel" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carrossel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carrossel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carrossel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-    </div>
-    <div class="carousel-inner">
+
+
+  <!-- Button trigger modal -->
+  <button type="button" id="model" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Cadastrar viagem
+    </button>
+
+<!--CARROSSEL-->
+<div style="display: flex; justify-content:center">
+    <div id="carousel" class="carousel slide" class="rounded mx-auto d-block" >
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="imagens/turismo.jpg" class="w-20" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Explore destinos esclusivos</h5>
+            <p>On the other hand, we denounce with</p>
+          </div>
+        </div>
         <div class="carousel-item">
-    <img src="https://i.pinimg.com/564x/08/bb/46/08bb46158b9ad11ec40f291409056f61.jpg" class="d-block w-100 carousel-image" alt="...">
-    <div class="carousel-caption d-none d-md-block">
-        <h5>First slide label</h5>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <img src="imagens/turismo2.jpg" class="w-20" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Explore destinos esclusivos</h5>
+            <p>On the other hand, we denounce with</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="imagens/turismo3.jpg" class="d-block w-20" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Explore destinos esclusivos</h5>
+            <p>On the other hand, we denounce with</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="imagens/turismo4.jpg" class="d-block w-20" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Explore destinos esclusivos</h5>
+            <p>On the other hand, we denounce with</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="imagens/turismo2.jpg" class="d-block w-20" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Explore destinos esclusivos</h5>
+            <p>On the other hand, we denounce with</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
-  </div>
-      <div class="carousel-item">
-        <img src="https://i.pinimg.com/564x/08/bb/46/08bb46158b9ad11ec40f291409056f61.jpg" class="d-block w-100 carousel-image" alt="...">
-        <div class="carousel-caption d-none d-md-block">
-          <h5>Second slide label</h5>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <img src="https://i.pinimg.com/564x/08/bb/46/08bb46158b9ad11ec40f291409056f61.jpg" class="d-block w-100 carousel-image" alt="...">
-        <div class="carousel-caption d-none d-md-block">
-          <h5>Third slide label</h5>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        </div>
-      </div>
-    </div>  
-    <button class="carousel-control-prev" type="button" data-bs-target="#carrossel" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carrossel" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
+
+    
+    
+    
 
 <script src="js/CRUD.js"></script>
 <script src="js/filtro.js"></script>
-<link rel="stylesheet" href="CSS/carrossel.css">
+
+
+
 
 
 </body>

@@ -86,7 +86,6 @@ function criarCard(tarefa) {
     }
 
     const card = `
-    <div class="row mx-auto my-2 g-3">
       <div class="col-lg-3 col-md-4 col-sm-6">
         <div class="card">
             <div class="card-header">
@@ -107,7 +106,6 @@ function criarCard(tarefa) {
             </div>  <!-- card footer -->
         </div> <!-- card -->
     </div>
-</div> 
     ` 
     return card
 }
